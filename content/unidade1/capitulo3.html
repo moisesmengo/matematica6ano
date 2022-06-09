@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Capítulo 3</title>
     <link rel="stylesheet" href="../../resources/styles/style.css" />
+    <link rel="stylesheet" href="../../resources/styles/interacoes.css" />
     <meta name="title" content="Matemática Contexto e Prática" />
     <meta name="language" content="pt-br" />
     <meta name="publisher" content=" Terra Sul Editora Eireli" />
@@ -189,12 +190,43 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       </p>
       <p>Observe no quadro esses agrupamentos.</p>
 
-      <img
-        src="../../resources/images/tabelapg23.PNG"
-        alt="Tabela com três linhas, sendo quatro colunas na primeira linha e 12 colunas na segunda e terceira linhas. Na coluna da Classe dos bilhões há três colunas: décima segunda ordem (centena de bilhão), décima primeira ordem (dezena de bilhão) e décima ordem (unidade de bilhão). Na coluna da Classe dos milhões, mais três colunas: nona ordem (centena de milhão), oitava ordem (dezena de milhão) e sétima ordem (unidade de milhão). Na coluna Classe dos milhares, outras três colunas: sexta ordem (centena de milhar), quinta ordem (dezena de milhar) e quarta ordem (unidade de milhar). Na última coluna Classe das unidades simples, as últimas três colunas: terceira ordem (centena de unidade), segunda ordem (dezena de unidade) e primeira ordem (unidade simples).  "
-      />
+      <div class="carousel">
+        <div class="carousel_item carousel_visible">
+          <img
+            src="../../resources/images/cl1.png"
+            alt="Classe dos bilhões há três colunas: décima segunda ordem (centena de bilhão), décima primeira ordem (dezena de bilhão) e décima ordem (unidade de bilhão)"
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/cl2.png"
+            alt=" Na coluna da Classe dos milhões, mais três colunas: nona ordem (centena de milhão), oitava ordem (dezena de milhão) e sétima ordem (unidade de milhão)."
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/cl3.png"
+            alt="Na coluna Classe dos milhares, outras três colunas: sexta ordem (centena de milhar), quinta ordem (dezena de milhar) e quarta ordem (unidade de milhar). "
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/cl4.png"
+            alt=" Na última coluna Classe das unidades simples, as últimas três colunas: terceira ordem (centena de unidade), segunda ordem (dezena de unidade) e primeira ordem (unidade simples). "
+          />
+        </div>
 
-      <p class="calibre1">Vejamos a leitura de alguns números:</p>
+        <div class="carousel_actions">
+          <button class="prev" id="carousel-prev" aria-label="Slide anterior">
+            ❮
+          </button>
+          <button class="next" id="carousel-next" aria-label="Próximo slide">
+            ❯
+          </button>
+        </div>
+      </div>
+
+      <p class="calibre1 mt20">Vejamos a leitura de alguns números:</p>
 
       <p class="d-flex">
         <span>► 78</span> <span>70 + 8</span> <span>Setenta e oito.</span>
@@ -308,11 +340,30 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
 
       <p class="calibre1 center">Figura 1</p>
 
-      <img
-        src="../../resources/images/pg25.PNG"
-        alt="Quatro retângulos coloridos. Eles diminuem de tamanho da esquerda para a direita. O primeiro na cor laranja é do laboratório Bio-Manguinhos/Fiocruz com as vacinas: febre amarela; poliomielite oral atenuada; poliomielite inativa; tríplice viral; tetra viral rotavírus; meningite AC; Haemophillus influenzae B (Hib); e pneumocócica. O segundo retângulo, na cor cinza, é do laboratório Butantan com as vacinas: influenza; raiva uso humano; DTP, DT, dT, DTPa; hepatite A; hepatite B; e HPV. O quarto retângulo, na cor roxa, é do laboratório Tecpar com a vacina raiva uso veterinário. O último e quarto triângulo, na cor azul, é do laboratório FAP com a vacina BCG. 
+      <div class="vacinas">
+        <img
+          src="../../resources/images/pg25.PNG"
+          alt="Quatro retângulos coloridos. Eles diminuem de tamanho da esquerda para a direita. O primeiro na cor laranja é do laboratório Bio-Manguinhos/Fiocruz com as vacinas: febre amarela; poliomielite oral atenuada; poliomielite inativa; tríplice viral; tetra viral rotavírus; meningite AC; Haemophillus influenzae B (Hib); e pneumocócica. O segundo retângulo, na cor cinza, é do laboratório Butantan com as vacinas: influenza; raiva uso humano; DTP, DT, dT, DTPa; hepatite A; hepatite B; e HPV. O quarto retângulo, na cor roxa, é do laboratório Tecpar com a vacina raiva uso veterinário. O último e quarto triângulo, na cor azul, é do laboratório FAP com a vacina BCG. 
 "
-      />
+        />
+
+        <div class="labs">
+          <div class="lab1 lab"></div>
+          <div class="lab2 lab"></div>
+          <div class="lab3 lab"></div>
+          <div class="lab4 lab"></div>
+        </div>
+      </div>
+
+      <script>
+        const labs = document.querySelectorAll(".lab");
+
+        labs.forEach((lab) => {
+          lab.addEventListener("click", ()=> {
+            lab.classList.toggle("ativo");
+          })
+        });
+      </script>
 
       <p class="calibre1">[…]</p>
       <p class="calibre1">
@@ -488,5 +539,7 @@ Desenhos coloridos de um leão, na cor laranja; de um pássaro, na cor verde pis
       <p class="calibre1">UNIDADE 1 - CAPÍTULO 3</p>
       <p class="calibre1 pg">27</p>
     </main>
+
+    <script src="../../resources/scripts/main.js" type="module"></script>
   </body>
 </html>

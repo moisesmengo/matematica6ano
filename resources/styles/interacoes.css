@@ -1,0 +1,179 @@
+.sequencias {
+  background: #0080c8;
+  margin-bottom: 15px;
+  font-weight: bold;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+.sequencias summary {
+  color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+.sequencias img {
+  margin: 10px auto;
+}
+
+/* carousel pg 24 */
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  min-width: 300px;
+  position: relative;
+  max-width: 500px;
+}
+.carousel_item img {
+  width: 100%;
+  display: block;
+  height: 100%;
+  object-fit: contain;
+}
+.carousel_item,
+.carousel_item_hidden {
+  display: none;
+}
+.carousel_visible {
+  display: block !important;
+  animation: slide 0.5s forwards;
+  width: auto;
+  height: 300px;
+}
+.carousel_actions {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.carousel_actions button {
+  height: 30px;
+  width: 30px;
+  border: 1px solid #fff;
+  background: #0080c8;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+}
+.prev {
+  margin-left: 30px;
+}
+.next {
+  margin-right: 30px;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* pg25 */
+.vacinas {
+  position: relative;
+}
+.labs {
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  top: 0;
+  left: 0;
+  align-items: flex-end;
+  grid-template-columns: repeat(4, 1fr);
+}
+.lab {
+  transition: 0.8s linear;
+  cursor: pointer;
+}
+
+.lab.ativo {
+  height: 0;
+}
+.lab1 {
+  background: #ec6707;
+  width: 80%;
+  height: 95%;
+  bottom: 7px;
+  position: relative;
+}
+.lab2 {
+  background: #706f6f;
+  width: 80%;
+  height: 84%;
+  bottom: 6px;
+  position: relative;
+}
+.lab3 {
+  background: #a863a5;
+  width: 80%;
+  height: 65%;
+  bottom: 6px;
+  position: relative;
+}
+.lab4 {
+  background: #0080c8;
+  width: 80%;
+  height: 48%;
+  bottom: 6px;
+  position: relative;
+}
+
+/* pg 29 */
+.dropdownmenu {
+  position: absolute;
+  background: #0080c8;
+  border: 2px solid #3333;
+  z-index: 200;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: ease 0.5;
+  padding: 10px;
+}
+.dropdownmenu::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -10px;
+  width: 0;
+  height: 0;
+  border-bottom: 10px solid #0080c8;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+}
+[data-dropdown] {
+  cursor: pointer;
+  position: relative;
+}
+[data-dropdown] .dropdownmenu {
+  display: none;
+}
+[data-dropdown]:hover .dropdownmenu,
+[data-dropdown].ativo .dropdownmenu {
+  display: block ;
+  animation: showup 0.6s forwards;
+}
+.dropdownmenu li a:hover {
+  color: #fff;
+}
+.dropdownmenu * {
+  color: #fff;
+}
+
+@keyframes showup {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
