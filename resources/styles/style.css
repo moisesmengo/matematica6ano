@@ -64,13 +64,17 @@ h1 {
   margin-bottom: 10px;
 }
 
-.grid2 {
+.grid2,
+.grid3 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 .sessoes_do_livro .grid2 {
   grid-template-columns: 2fr 1fr;
+}
+.grid3 {
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .d-flex {
@@ -125,6 +129,11 @@ table td {
   padding: 3px 8px;
 }
 
+ul {
+  margin-left: 20px;
+  margin-bottom: 10px;
+}
+
 .sup1,
 .sup2 {
   display: inline-block;
@@ -140,6 +149,16 @@ table td {
   height: 1px;
   background: #000;
   display: block;
+}
+.semireta {
+  display: inline-block;
+  position: relative;
+}
+.semireta::before {
+  content: "➝";
+  display: block;
+  position: absolute;
+  top: -12px;
 }
 .sup2::before {
   margin-top: 2px;
