@@ -8,6 +8,7 @@
     <meta name="language" content="pt-br" />
     <meta name="publisher" content=" Terra Sul Editora Eireli" />
     <link rel="stylesheet" href="../../resources/styles/style.css" />
+    <link rel="stylesheet" href="../../resources/styles/interacoes.css" />
     <meta
       name="description"
       content="Matemática : contexto e prática : 6º ano : livro digital-interativo do
@@ -60,12 +61,18 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         </p>
       </div>
 
-      <div class="cardcolor">
+      <div class="cardcolor u2c2">
         <p>
           Quando uma multiplicação apresenta todos os fatores iguais, ela pode
-          ser representada na forma de uma potência. Observe:
+          ser representada na forma de uma potência.
         </p>
-        <img src="../../resources/images/pot.PNG" alt="Exemplo de fração" />
+
+        <details>
+          <summary>Observe:</summary>
+          <p>
+            <img src="../../resources/images/pot.PNG" alt="Exemplo de fração" />
+          </p>
+        </details>
       </div>
 
       <p>Veja outros exemplos de potências:</p>
@@ -78,11 +85,39 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         <b class="calibre4">Quadrado de um número natural</b>
       </h2>
       <p class="calibre1">Observe os quadrados a seguir.</p>
-      <img
-        src="../../resources/images/pg81.PNG"
-        alt="Quatro figuras formadas por quadrados. A primeira é um quadrado. A segunda, são quatro quadrados, dois em cima e dois embaixo. A terceira são nove quadrados, três em cima, três no centro e três abaixo. A quarta são 16 quadrados, quatro em cima, quatro no centro, mais quatro no centro, e quatro abaixo. 
-"
-      />
+
+      <div class="carousel">
+        <div class="carousel_item carousel_visible">
+          <img src="../../resources/images/q1.PNG" alt="quadrado " />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/q2.PNG"
+            alt="quatro quadrados, dois em cima e dois embaixo"
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/q3.PNG"
+            alt="nove quadrados, três em cima, três no centro e três abaixo"
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/q4.PNG"
+            alt="16 quadrados, quatro em cima, quatro no centro, mais quatro no centro, e quatro abaixo."
+          />
+        </div>
+
+        <div class="carousel_actions" style="opacity: 0.3">
+          <button class="prev" id="carousel-prev" aria-label="Slide anterior">
+            ❮
+          </button>
+          <button class="next" id="carousel-next" aria-label="Próximo slide">
+            ❯
+          </button>
+        </div>
+      </div>
 
       <p class="calibre1">
         Podemos representar a quantidade de quadrados menores que compõem cada
@@ -101,11 +136,79 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       </h2>
       <p class="mt20">Observe os cubos a seguir.</p>
 
-      <img
-        src="../../resources/images/81pg2.PNG"
-        alt="Quatro figuras formadas por cubos. A primeira é um cubo. A segunda tem dois andares, com quatro cubos em cada andar. A terceira tem três andares, com nove cubos em ada andar. A quarta, tem quatro andares, com 16 cubos em cada andar.
-"
-      />
+      <div class="carousel">
+        <div class="carousel_item c2 carousel_visible">
+          <img src="../../resources/images/cubo1.PNG" alt="cubo " />
+        </div>
+        <div class="carousel_item c2">
+          <img
+            src="../../resources/images/cubo2.PNG"
+            alt="dois andares, com quatro cubos em cada andar."
+          />
+        </div>
+        <div class="carousel_item c2">
+          <img
+            src="../../resources/images/cubo3.PNG"
+            alt="três andares, com nove cubos em ada andar"
+          />
+        </div>
+        <div class="carousel_item c2">
+          <img
+            src="../../resources/images/cubo4.PNG"
+            alt="três andares, com nove cubos em ada andar. A quarta, tem quatro andares, com 16 cubos em cada andar."
+          />
+        </div>
+
+        <div class="carousel_actions" style="opacity: 0.3">
+          <button class="prev" id="n2" aria-label="Slide anterior">❮</button>
+          <button class="next" id="n1" aria-label="Próximo slide">❯</button>
+        </div>
+      </div>
+
+      <script>
+        function Carousel(carousel, next, prev) {
+          if (carousel && next && prev) {
+            let posicaoAtual = 0;
+            const slides = document.querySelectorAll(carousel);
+            const totalSlides = slides.length;
+
+            const atualizarPosicao = () => {
+              for (let slide of slides) {
+                slide.classList.remove("carousel_visible");
+                slide.classList.add("carousel_item_hidden");
+              }
+
+              slides[posicaoAtual].classList.add("carousel_visible");
+            };
+
+            const proximoSlide = () => {
+              if (posicaoAtual === totalSlides - 1) {
+                posicaoAtual = 0;
+              } else {
+                posicaoAtual++;
+              }
+              atualizarPosicao();
+            };
+
+            const SlideAnterior = () => {
+              if (posicaoAtual === 0) {
+                posicaoAtual = totalSlides - 1;
+              } else {
+                posicaoAtual--;
+              }
+              atualizarPosicao();
+            };
+
+            document.getElementById(next).addEventListener("click", () => {
+              proximoSlide();
+            });
+            document.getElementById(prev).addEventListener("click", () => {
+              SlideAnterior();
+            });
+          }
+        }
+        Carousel(".c2", "n1", "n2");
+      </script>
 
       <p class="calibre1">
         Podemos representar a quantidade de cubos menores que compõem cada cubo
@@ -337,12 +440,16 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
             a 36, devemos realizar uma operação chamada de
             <strong>radiciação</strong>.
           </p>
-          <p>Observe seus elementos:</p>
 
-          <img
-            src="../../resources/images/raiz.PNG"
-            alt="Exemplo de raiz quadrada"
-          />
+          <details>
+            <summary>Observe seus elementos:</summary>
+            <p>
+              <img
+                src="../../resources/images/raiz.PNG"
+                alt="Exemplo de raiz quadrada"
+              />
+            </p>
+          </details>
         </div>
         <div>
           <img
@@ -496,7 +603,9 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       <p class="calibre1">UNIDADE 2 - CAPÍTULO 4</p>
       <p class="calibre1 pg">83</p>
 
-      <p class="calibre1 destaque">► PROBABILIDADE E ESTATÍSTICA</p>
+      <p class="calibre1 destaque" id="section4">
+        ► PROBABILIDADE E ESTATÍSTICA
+      </p>
 
       <div class="grid2">
         <div>
@@ -595,7 +704,7 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       <p class="calibre1">UNIDADE 2 - CAPÍTULO 4</p>
       <p class="calibre1 pg">85</p>
 
-      <p class="calibre1 destaque">RELEMBRE</p>
+      <p class="calibre1 destaque" id="section5">RELEMBRE</p>
 
       <p>
         1. De acordo com as informações divulgadas pelo IBGE no Censo de 2010, a
@@ -705,6 +814,7 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
 
       <p class="calibre1">UNIDADE 2 - CAPÍTULO 4</p>
       <p class="calibre1 pg">87</p>
+      <script type="module" src="../../resources/scripts/main.js"></script>
     </main>
   </body>
 </html>

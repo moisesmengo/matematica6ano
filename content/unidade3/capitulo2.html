@@ -15,22 +15,56 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
     <meta name="author" content="Cintia Bagatin Lapa" />
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../resources/styles/style.css" />
+    <link rel="stylesheet" href="../../resources/styles/interacoes.css" />
   </head>
   <body>
     <main class="container">
-      <p class="calibre1">CAPÍTULO</p>
-      <p class="calibre1">2</p>
-      <p class="calibre1">Ângulos</p>
-      <h2 class="calibre3"><b class="calibre4">Ideia de ângulo</b></h2>
+      <p class="calibre1 titulo">CAPÍTULO 2 - Ângulos</p>
+
+      <h2 class="calibre3">
+        <b class="calibre4 subtitulo" id="section1">Ideia de ângulo</b>
+      </h2>
       <p class="calibre1">Observe as situações a seguir.</p>
       <h2 class="calibre3"><b class="calibre4">Situação 1</b></h2>
-      <p class="calibre1">
+      <p class="calibre1 mt20">
         Bruno adora andar de <i class="calibre6">skate</i>. Observe as manobras
         que ele consegue realizar.
       </p>
+
+      <div class="carousel">
+        <div class="carousel_item carousel_visible">
+          <img
+            src="../../resources/images/bruno1.PNG"
+            alt="Ilustração de Bruno sobre o skate, ele está de frente."
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/bruno2.PNG"
+            alt="Ilustração de Bruno sobre o skate, virado à esquerda."
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/bruno3.PNG"
+            alt="Ilustração de Bruno sobre o skate, ele está de costas, com uma flecha em semicírculo e apontando para a esquerda, indica a manobra que ele fez."
+          />
+        </div>
+
+        <div class="carousel_actions" style="opacity: 0.3">
+          <button class="prev" id="carousel-prev" aria-label="Slide anterior">
+            ❮
+          </button>
+          <button class="next" id="carousel-next" aria-label="Próximo slide">
+            ❯
+          </button>
+        </div>
+      </div>
+
       <p class="calibre1">Reinaldo Rosa/Acervo da Editora</p>
       <h2 class="calibre3"><b class="calibre4">Situação 2</b></h2>
-      <p class="calibre1">
+      <p class="calibre1 mt20">
         Carla é amiga de Bruno e também realiza manobras radicais com seu
         <i class="calibre6">skate</i>. Observe o que ela consegue fazer.
       </p>
@@ -39,13 +73,577 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         1. Nas duas situações apresentadas são feitos giros utilizando um
         <i class="calibre6">skate</i>.
       </p>
-      <p class="calibre1">
-        Troque ideias com um colega e descrevam os giros feitos por Bruno e
-        Carla.
-      </p>
-      <p class="calibre1">94</p>
+
+      <div class="carousel">
+        <div class="c2 carousel_visible">
+          <img
+            src="../../resources/images/carla1.PNG"
+            alt="Ilustração de Carla sobre o skate, ela está de frente"
+          />
+        </div>
+        <div class="c2">
+          <img
+            src="../../resources/images/carla2.PNG"
+            alt="Ilustração de Carla sobre o skate, virada à esquerda."
+          />
+        </div>
+        <div class="c2">
+          <img
+            src="../../resources/images/carla3.PNG"
+            alt="Ilustração de Carla sobre o skate, ela está de costa."
+          />
+        </div>
+        <div class="c2">
+          <img
+            src="../../resources/images/carla4.PNG"
+            alt="Ilustração de Carla sobre o skate, virada à direita."
+          />
+        </div>
+        <div class="c2">
+          <img
+            src="../../resources/images/carla5.PNG"
+            alt="Ilustração de Carla sobre o skate, ela está de frente, com uma flecha quase fechando um círculo e apontando para a direita, indica a manobra que ela fez."
+          />
+        </div>
+
+        <div class="carousel_actions" style="opacity: 0.3">
+          <button class="prev" id="p" aria-label="Slide anterior">❮</button>
+          <button class="next" id="n" aria-label="Próximo slide">❯</button>
+        </div>
+      </div>
+
+      <script>
+        function Carousel(carousel, next, prev) {
+          if (carousel && next && prev) {
+            let posicaoAtual = 0;
+            const slides = document.querySelectorAll(carousel);
+            const totalSlides = slides.length;
+
+            const atualizarPosicao = () => {
+              for (let slide of slides) {
+                slide.classList.remove("carousel_visible");
+                slide.classList.add("carousel_item_hidden");
+              }
+
+              slides[posicaoAtual].classList.add("carousel_visible");
+            };
+
+            const proximoSlide = () => {
+              if (posicaoAtual === totalSlides - 1) {
+                posicaoAtual = 0;
+              } else {
+                posicaoAtual++;
+              }
+              atualizarPosicao();
+            };
+
+            const SlideAnterior = () => {
+              if (posicaoAtual === 0) {
+                posicaoAtual = totalSlides - 1;
+              } else {
+                posicaoAtual--;
+              }
+              atualizarPosicao();
+            };
+
+            document.getElementById(next).addEventListener("click", () => {
+              proximoSlide();
+            });
+            document.getElementById(prev).addEventListener("click", () => {
+              SlideAnterior();
+            });
+          }
+        }
+        Carousel(".c2", "n", "p");
+      </script>
+
+      <div class="d-flex">
+        <img src="../../resources/images/i1.PNG" alt="Ícone troca de ideias" />
+        <p class="calibre1">
+          Troque ideias com um colega e descrevam os giros feitos por Bruno e
+          Carla.
+        </p>
+      </div>
+      <p class="calibre1 pg">94</p>
       <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+
+      <p class="calibre1">
+        Os giros realizados por Bruno e Carla nos dão a ideia de ângulo.
+      </p>
+      <p class="calibre1">A figura a seguir representa um ângulo:</p>
+      <img
+        src="../../resources/images/94ang.PNG"
+        alt="Figura de um ângulo com duas semirretas, nomeadas de A e B, partindo do ponto O, chamado de vértice. A semirreta A é uma linha na diagonal, apontando para a direita. A semirreta B é uma linha na horizontal. "
+      />
+      <p class="calibre1">
+        O ângulo é formado por duas semirretas,
+        <span class="semireta">OA</span> e <span class="semireta">OB</span>, que
+        partem de um mesmo ponto: O.
+      </p>
+      <p class="calibre1">
+        <span class="semireta">OA</span> e <span class="semireta">OB</span> são
+        chamadas de <b class="calibre3">lados </b>do ângulo e o ponto O é
+        denominado <b class="calibre3">vértice </b>do ângulo. Indicamos a
+        nomenclatura de um ângulo por AÔB (lemos: ângulo AOB) ou BÔA.
+      </p>
+      <p class="calibre1">Outro exemplo:</p>
+
+      <div class="d-flex">
+        <img
+          src="../../resources/images/angxy.PNG"
+          alt="Figura de um ângulo com duas semirretas, nomeadas de X e Y, partindo do ponto O, chamado de vértice. A semirreta X é uma linha na diagonal, apontando para a esquerda. A semirreta Y é uma linha na horizontal. "
+        />
+        <p>
+          Vértice: O <br />
+          Lados: <span class="semireta">OX</span> e
+          <span class="semireta">OY</span> <br />
+          Nomenclatura: XÔY ou YÔX
+        </p>
+      </div>
+
+      <p class="calibre1">
+        <b class="calibre3 subtitulo" id="section2"
+          >Unidade de medida de ângulo</b
+        >
+      </p>
+      <p class="calibre1">
+        Uma das unidades de medida mais usadas para medir a abertura de ângulos
+        é o grau e o símbolo utilizado é º. Para medir um ângulo podemos
+        utilizar um instrumento chamado <b class="calibre3">transferidor</b>.
+      </p>
+
+      <div class="grid2">
+        <div>
+          <img
+            src="../../resources/images/000086.png"
+            alt="Fotografia de um transferidor de 180 graus. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. "
+          />
+          <legend>Transferidor de 180° com abertura igual a meia-volta.</legend>
+        </div>
+        <div>
+          <img
+            src="../../resources/images/000311.png"
+            alt="Fotografia de um transferidor de 360 graus. Ele tem o formato de um círculo. No centro do círculo, uma régua horizontal. "
+          />
+          <legend>
+            Transferidor de 360° com abertura igual a uma volta completa.
+          </legend>
+        </div>
+      </div>
+
+      <p class="calibre1 mt20">
+        Os transferidores podem estar divididos em 360 ou 180 partes iguais.
+      </p>
+      <p class="calibre1">
+        Cada uma dessas partes é denominada <b class="calibre3">grau</b>.
+      </p>
+      <p class="calibre1">
+        Uma volta completa possui 360º e meia-volta, 180º. Temos que 1 grau
+        corresponde a <sup>1</sup>/<sub>360</sub> da medida da circunferência.
+      </p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+      <p class="calibre1 pg">95</p>
+
+      <img
+        src="../../resources/images/grau.PNG"
+        alt="Figura de um transferidor de 360 graus. Uma linha horizontal no centro do círculo liga o número 180 à esquerda ao número zero à direita.  Um retângulo tracejado destaca, a região do transferidor nos números zero e dez. Do lado direito da figura, a imagem destacada da região do triângulo tracejado, indicando em vermelho a localização de um grau. 
+"
+      />
+
+      <p class="calibre1">Veja como utilizá-lo:</p>
+      <p class="calibre1">
+        ► posicione o centro do transferidor coincidindo com o vértice do
+        ângulo;
+      </p>
       <p class="calibre1"></p>
+      <p class="calibre1">
+        ► a linha horizontal que passa pelo centro do transferidor deve
+        coincidir com um dos lados do ângulo;
+      </p>
+      <p class="calibre1"></p>
+      <p class="calibre1">
+        ► verifique a medida de abertura em que passa o outro lado do ângulo.
+      </p>
+
+      <img
+        src="../../resources/images/abgrau.PNG"
+        alt="Fotografia de um transferidor de 180 graus. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. Sobre ele, e vermelho, duas semirretas indicando 60 graus."
+      />
+
+      <p class="calibre1">Neste caso, o ângulo AÔB mede 60º.</p>
+      <p class="calibre1">
+        <b class="calibre3 subtitulo" id="section3"
+          >Classificação dos ângulos</b
+        >
+      </p>
+      <p class="calibre1">
+        A ideia de ângulo está presente em nosso dia a dia. Observe os exemplos
+        a seguir.
+      </p>
+      <img
+        src="../../resources/images/3fts.PNG"
+        alt="Três fotografias com duas semirretas vermelhas, partindo de um vértice e indicando o ângulo. A primeira, à esquerda, é uma escada, a primeira linha vermelha está na vertical e a segunda na horizontal, formando um ângulo de 90 graus. A segunda fotografia abaixo é de uma passarela. As linhas vermelhas destacam o caminho da passarela, formando um ângulo menor que 90 graus. A terceira foto, à direita, é de um obstáculo em uma pista de skate. As linhas vermelhas, também formam um ângulo menor que 90 graus. "
+      />
+
+      <p class="calibre1 pg">96</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+
+      <p class="calibre1">
+        Pelas imagens, percebe-se que as inclinações ou aberturas dos ângulos
+        variam, e conforme as medidas dessas aberturas podemos classificá-los.
+      </p>
+      <p class="calibre1">
+        Agora, usaremos um transferidor para mostrar essas classificações,
+        faci-litando o entendimento.
+      </p>
+      <p class="calibre1"><b class="calibre3">Ângulo nulo</b></p>
+
+      <img
+        src="../../resources/images/angnulo.PNG"
+        alt="Fotografia de um transferidor de 180 graus com abertura igual a meia volta. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. No centro da régua horizontal até o final dela à direita destaque em vermelho de uma linha horizontal ligando o ponto B ao A, indicando o ângulo nulo. "
+      />
+      <p class="calibre1">med (AÔB) = 0º</p>
+      <p class="calibre1"><b class="calibre3">Ângulo raso</b></p>
+      <p class="calibre1">
+        A medida de abertura de um ângulo raso é igual à metade da medida de
+        abertura de uma circunferência. Uma circunferência tem 360º, então o
+        <b class="calibre3">ângulo</b> <b class="calibre3">raso</b> tem a metade
+        dessa medida, ou seja, 180º.
+      </p>
+
+      <div class="grid2">
+        <div>
+          <img
+            src="../../resources/images/raso.PNG"
+            alt="Fotografia de um transferidor de 180 graus com abertura igual a meia volta. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. Uma linha liga as duas extremidades da régua, de B a A, indicando o ângulo de 180 graus."
+          />
+          <p class="calibre1">med (AÔB) = 180º</p>
+        </div>
+        <img
+          src="../../resources/images/ras2.PNG"
+          alt="foto de uma casa. No teto, acima da varanda, uma linha horizontal reta vermelha indica o ângulo de 180 graus. "
+        />
+      </div>
+
+      <p class="calibre1"><b class="calibre3">Ângulo reto</b></p>
+      <p class="calibre1">
+        A medida de abertura de um ângulo reto equivale à metade da medida de
+        abertura de um ângulo raso, ou seja, 90º. Todo ângulo cuja medida de
+        abertura é igual a 90º é chamado de <b class="calibre3">ângulo reto</b>.
+      </p>
+
+      <div class="grid2">
+        <div>
+          <img
+            src="../../resources/images/reto.PNG"
+            alt="Fotografia de um transferidor de 180 graus com abertura igual a meia volta. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. Duas linhas partem de um vértice, no centro da regra horizontal. A linha A é uma reta horizontal. A linha B é diagonal com a ponta em direção à direita, formando um ângulo menor que 90 graus"
+          />
+        </div>
+        <img
+          src="../../resources/images/retcasa.PNG"
+          alt=" foto de uma casa, demonstrando na prática o ângulo menor de 90 graus. No andar de cima, duas linhas indicam o ângulo. Uma linha é horizontal e percorre a parte de cima da varanda e a outra contorna o telhado. "
+        />
+      </div>
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+      <p class="calibre1 pg">97</p>
+
+      <p class="calibre1"><b class="calibre3">Ângulo agudo</b></p>
+      <p class="calibre1">
+        Quando a medida de abertura é menor que um ângulo de 90º, temos um
+        <b class="calibre3">ângulo agudo</b>.
+      </p>
+      <div class="grid2">
+        <div>
+          <img
+            src="../../resources/images/agudo.PNG"
+            alt="Fotografia de um transferidor de 180 graus com abertura igual a meia volta. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. Duas linhas partem de um vértice, no centro da regra horizontal. A linha A é uma reta horizontal. A linha B é diagonal com a ponta em direção à esquerda, formando um ângulo maior que 90 graus.  "
+          />
+        </div>
+        <img
+          src="../../resources/images/agudocasa.PNG"
+          alt="  foto de uma casa, demonstrando o ângulo maior que 90 graus. No andar de cima, duas linhas indicam o ângulo. As linhas são a parte de cima do telhado. "
+        />
+      </div>
+
+      <p class="calibre1"><b class="calibre3">ângulo obtuso</b>.</p>
+
+      <p>
+        Quando a medida de abertura é maior que 90º e menor que 180º, temos um
+        <strong> ângulo obtuso.</strong>
+      </p>
+
+      <div class="grid2">
+        <div>
+          <img
+            src="../../resources/images/obsoleto.PNG"
+            alt="Fotografia de um transferidor de 180 graus com abertura igual a meia volta. Ele é formado de duas partes. Uma régua horizontal na base e acima dela uma régua em semicírculo. Duas linhas partem de um vértice, no centro da regra horizontal. A linha A é uma reta horizontal. A linha B é diagonal com a ponta em direção à esquerda, formando um ângulo maior que 90 graus.   "
+          />
+        </div>
+        <img
+          src="../../resources/images/obscasa.PNG"
+          alt=" foto de uma casa, demonstrando o ângulo maior que 90 graus. No andar de cima, duas linhas indicam o ângulo. As linhas são a parte de cima do telhado. "
+        />
+      </div>
+
+      <p class="calibre1"><b class="calibre3">Ângulo pleno</b></p>
+      <p class="calibre1">
+        Quando a medida de abertura tem uma volta completa, ou seja, 360º.
+      </p>
+
+      <img
+        src="../../resources/images/pleno.PNG"
+        alt="Fotografia de um transferidor de 360 graus. Ele tem o formato de um círculo. No centro do círculo, uma régua horizontal.  Uma linha vermelha horizontal parte do centro da régua horizontal em direção à direita."
+      />
+
+      <p class="calibre1">med (AÔB) = 360º</p>
+      <p class="calibre1">
+        Todo ângulo cuja medida de abertura é igual a 360º é chamado de
+        <b class="calibre3">pleno</b>.
+      </p>
+
+      <p class="calibre1 pg">98</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+
+      <p class="calibre1">
+        <b class="calibre3 subtitulo" id="section4">Retas perpendiculares</b>
+      </p>
+
+      <img
+        src="../../resources/images/perp.PNG"
+        alt="Ilustração de dois homens conversando em uma calçada. O primeiro está do lado de um carro, e o outro em frente a uma casa. Em balões de diálogo, eles conversam. O primeiro pergunta: Como faço para chegar à Rua dos Arvoredos? O segunda responde: A Rua dos Arvoredos é a próxima. Ela é perpendicular a essa rua em que estamos. Ao lado da figura, outra figura destaca o rosto do primeiro homem. Acima dele, um balão de pensamento com árvores separadas por duas ruas formando uma cruz. "
+      />
+      <p class="calibre1">Reinaldo Rosa/Acervo da Editora</p>
+
+      <div class="d-flex">
+        <p class="calibre1">
+          1. Na situação apresentada, uma pessoa pede uma informação a outra
+          pessoa. Troque ideias com seu colega e expliquem com suas palavras o
+          que significa dizer que uma rua é perpendicular à outra.
+        </p>
+        <img src="../../resources/images/i1.PNG" alt="Ícone troca de ideias" />
+      </div>
+
+      <p class="calibre1">
+        Entendemos que retas perpendiculares são aquelas que formam um ângulo de
+        90º entre si passando por um ponto P dado. Agora, vamos traçar retas
+        perpendiculares entre si? Para traçá-las você vai precisar de um par de
+        esquadros:
+      </p>
+
+      <div class="grid2">
+        <div>
+          <img
+            src="../../resources/images/604545.PNG"
+            alt="Figura de um esquadro formado por um ângulo de 90 graus e dois ângulos de 45 graus. Ele é uma régua no formato de um triângulo. "
+          />
+          <p class="calibre1">
+            ► Faça o maior lado do esquadro de 45º coincidir com a reta dada
+            <strong>r.</strong>
+          </p>
+        </div>
+        <div>
+          <img
+            src="../../resources/images/306090.PNG"
+            alt="Figura de um esquadro formado por um ângulo de 90 graus, outro de 60 graus e mais outro de 30 graus. Ele é uma régua no formato de um triângulo. "
+          />
+          <p class="calibre1">
+            ► Encoste o maior lado do esquadro de 60º no esquadro de 45º.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid2">
+        <div>
+          <p class="calibre1">
+            ► Faça o maior lado do esquadro de 45º coincidir com a reta dada
+            <strong>r.</strong>
+          </p>
+          <img
+            src="../../resources/images/pr.PNG"
+            alt="Figura de um esquadro com o vértice apontado para baixo. Na parte de cima, uma linha reta nomeada de r. No centro dela, um ponto preto com a letra P.  "
+          />
+        </div>
+        <div>
+          <p class="calibre1">
+            ► Encoste o maior lado do esquadro de 60º no esquadro de 45º.
+          </p>
+          <img
+            src="../../resources/images/prfm.PNG"
+            alt="Figura de dois esquadros, um móvel e um fixo. O móvel tem o vértice apontado para baixo. Na parte de cima dele, uma linha reta nomeada de r. No centro dela, um ponto preto com a letra P. O outro esquadro à esquerda é o fixo. 
+ "
+          />
+        </div>
+      </div>
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+      <p class="calibre1 pg">99</p>
+
+      <div class="grid2">
+        <div>
+          <p class="calibre1">
+            ► Mude a posição do esquadro de 45º, conforme a ilustração.
+          </p>
+          <img
+            src="../../resources/images/102a.PNG"
+            alt="Figura de dois esquadros, um móvel e um fixo. O móvel está à direita do fixo em duas posições. Na primeira, o vértice está virado para a esquerda. Na segunda, o esquadro está tracejado, indicando a mudança de posição com o vértice virado para baixo. Uma linha reta nomeada de r está por trás do esquadro móvel. No centro dela, um ponto preto com a letra P. 
+"
+          />
+        </div>
+        <div>
+          <p class="calibre1">
+            ► Segure o esquadro de 60º, deslize o de 45º até o ponto P e trace a
+            perpendicular.
+          </p>
+          <img
+            src="../../resources/images/102b.PNG"
+            alt="Figura de dois esquadros, um móvel e um fixo. O móvel está à direita do fixo. Ele tem o vértice apontado para a esquerda. Uma linha reta nomeada de r está por trás dele. No centro, um ponto preto com a letra P. Uma linha vertical passa por esse ponto P, indicando o traço perpendicular feito com o esquadro móvel apoiado pelo esquadro fixo. 
+ "
+          />
+        </div>
+      </div>
+
+      <img
+        src="../../resources/images/cr.PNG"
+        alt="Ilustração de duas retas, uma na vertical e outra na horizontal com a letra P em comum no centro delas. A reta horizontal foi nomeada de r. A reta vertical de s, formando a perpendicular.
+ "
+      />
+
+      <p class="calibre1">
+        ► Pronto! Vamos nomear a reta perpendicular à reta
+        <b class="calibre3">r</b> de <b class="calibre3">s</b>.
+      </p>
+
+      <p class="calibre1 destaque">ENCONTRE SOLUÇÕES</p>
+
+      <p>
+        1. Observe as horas que cada relógio abaixo indica. Em cada um deles tem
+        um ângulo destacado. Quantos graus medem esses ângulos?
+      </p>
+
+      <img
+        src="../../resources/images/relogios.PNG"
+        alt="Ilustração de 4 relógios redondos e com ponteiros a partir do centro nomeados de a, b, c, d. No relógio A, o ponteiro maior é uma linha reta na vertical e encosta no número 12 e o ponteiro menor, também uma linha reta na vertical, encosta no 6. No relógio B, o ponteiro maior é uma linha reta e encosta no número 12 e o menor é uma linha diagonal apontada para a direita até o número cinco. No relógio C, o ponteiro maior é uma linha reta vertical e encosta no número 12 e o menor é uma linha horizontal e encosta no número 3. No relógio D, o ponteiro maior é uma linha reta vertical e encosta no número 12 e o menor é uma linha diagonal apontada para a esquerda até o número 7.   
+ "
+      />
+
+      <p>
+        2. As semirretas a seguir formam vários ângulos. Com o auxílio de um
+        transferidor, indique as medidas dos ângulos.
+      </p>
+
+      <img
+        src="../../resources/images/1022.PNG"
+        alt="Figura de seis semirretas indicadas pelas letras: A, B, C, D, E, F. Todas partem de um vértice nomeado com a letra O. A letra A é horizontal apontada para a direita. A letra B é uma diagonal apontada para a direita. A letra C também é uma diagonal apontada para a direita e com uma abertura maior que a B. A letra D é uma linha na vertical. A letra E é uma diagonal apontada para a esquerda. A letra F é horizontal apontada para a esquerda.   
+ "
+      />
+
+      <p>a) AÔB</p>
+      <p>b) AÔC</p>
+      <p>c) DÔF</p>
+      <p>d) DÔE</p>
+
+      <p class="calibre1 pg">100</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+
+      <p>
+        3. Com o auxílio do transferidor, construa, em seu caderno, um ângulo
+        de:
+      </p>
+
+      <p>a) 70º</p>
+      <p>b) 120º</p>
+      <p>c) 220º</p>
+
+      <p>
+        4. Meça os ângulos a seguir com o auxílio do transferidor e escreva no
+        caderno as suas medidas.
+      </p>
+
+      <div class="grid2">
+        <div>
+          <p>b)</p>
+          <img
+            src="../../resources/images/103a.PNG"
+            alt="duas semirretas partindo de um mesmo vértice. Uma semirreta está na horizontal. A outra semirreta aponta para a direita."
+          />
+        </div>
+        <div>
+          <p>b)</p>
+          <img
+            src="../../resources/images/103b.PNG"
+            alt=" duas semirretas partindo de um mesmo vértice tem o formato da letra V. "
+          />
+        </div>
+      </div>
+
+      <p>
+        5. Em seu caderno, desenhe e classifique os ângulos a seguir de acordo
+        com suas medidas.
+      </p>
+      <img
+        src="../../resources/images/n5.PNG"
+        alt="Quatro figuras com duas semirretas nomeadas de a, b, c, d. Na letra A, as semirretas estão na horizontal, uma aponta para a direita e outra para a esquerda. Na letra B, uma semirreta está na horizontal, a outra parte do mesmo vértice e aponta para a direita. Na letra C, as semirretas foram a letra L. Na letra D, as semirretas formam a letra V na diagonal virada para a direita. "
+      />
+
+      <p>
+        6. Com o auxílio de dois esquadros, em seu caderno, trace uma reta
+        <s>s</s>, perpendicular à <b>m</b>, passando pelo ponto <b>X</b>.
+      </p>
+      <img
+        src="../../resources/images/xm.PNG"
+        alt="Figura de uma linha reta nomeada de m. Acima dela, ao centro está o ponto X. "
+      />
+      <p>
+        7. Sem utilizar o transferidor, descubra a medida dos ângulos indicados.
+      </p>
+
+      <p>a) BÔC = ?</p>
+      <img
+        src="../../resources/images/1037a.PNG"
+        alt="letra A tem uma linha horizontal formada por duas semirretas. A primeira à esquerda nomeada de C e a segunda, à direita, nomeada de A. Do vértice delas, nomeado de O, parte uma outra semirreta, nomeada de B e direcionada à direita, formando um ângulo de 75 graus. 
+A figura seguinte"
+      />
+      <p>b) NÔP = ?</p>
+      <img
+        src="../../resources/images/1037b.PNG"
+        alt="etra B, tem três semirretas. Ela tem o formato de um L com a linha vertical nomeada de P e a linha horizontal nomeada de M. Do vértice delas, nomeado de O, a terceira semirreta é diagonal, nomeada de N. Entre a linha M e N, o ângulo é de 38 graus. 
+ "
+      />
+      <p>c) DÔE = ?</p>
+      <img
+        src="../../resources/images/1037c.PNG"
+        alt="letra C, tem no centro o vértice, nomeado de O. Dele sai uma semirreta apontada para cima apontada para a direita e nomeada de D. Do mesmo vértice, sai uma outra semirreta apontada para baixo e nomeada pela letra D. Entre as semirretas D e E, o ângulo é de 85 graus. 
+ "
+      />
+
+      <div class="d-flex">
+        <img
+          src="../../resources/images/i6.PNG"
+          alt="Ícone Desafio
+ "
+        />
+        <p>
+          8. (OBMEP) Qual é a medida do menor ângulo formado pelos ponteiros de
+          um relógio quando ele marca 2 horas?
+        </p>
+      </div>
+
+      <img
+        src="../../resources/images/ramre.PNG"
+        alt="Ilustração de um relógio marcando duas horas. Partindo do centro do relógio, dois ponteiros. O primeiro maior é uma linha reta e encosta no número 12, o segundo menor é uma linha diagonal apontada para a direita até o número dois.
+ "
+      />
+
+      <p>a) 30º</p>
+      <p>b) 45º</p>
+      <p>c) 60º</p>
+      <p>d) 75º</p>
+      <p>e) 90º</p>
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 2</p>
+      <p class="calibre1 pg">101</p>
+      <script type="module" src="../../resources/scripts/main.js"></script>
     </main>
   </body>
 </html>

@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unidade 3 - Capítulo 6</title>
+    <link rel="stylesheet" href="../../resources/styles/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <p class="calibre1 titulo">CAPÍTULO 6 - Ampliação e redução de figuras</p>
+
+      <p class="calibre1">
+        <b class="calibre3 subtitulo" id="section1"
+          >Ampliação e redução de figuras planas na malha quadriculada</b
+        >
+      </p>
+      <p>Observe o desenho abaixo.</p>
+
+      <style>
+        .scales {
+          position: relative;
+          height: 600px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .scales img {
+          position: absolute;
+        }
+      </style>
+
+      <div class="scales">
+        <img
+          class="scale"
+          src="../../resources/images/barco.PNG"
+          alt="Desenho de uma malha quadriculada de sete linhas e dez colunas. Nela o desenho de um barco formado por três figuras geométricas em três cores. Em azul o casco do barco é um trapézio com a base menor que a parte de cima. As laterais estão em diagonal inclinadas para fora. Acima do casco, à esquerda em amarelo, um triângulo com o vértice apontado para baixo e para a direita. Do lado direito do triângulo amarelo, outro triângulo. De cor verde, ele tem o vértice apontado para baixo e para a esquerda. "
+        />
+        <img
+          class="maior"
+          src="../../resources/images/Capturar.PNG"
+          style="width: 100%"
+          alt="Desenho ampliado proporcionalmente ao dobro do mesmo barco descrito acima. A malha ampliou para 20 colunas e 14 linhas. "
+        />
+      </div>
+
+      <script>
+        const scale = document.querySelector(".scale");
+        const grane = document.querySelector(".maior");
+
+        grane.style.display = "none";
+
+        scale.addEventListener("click", () => {
+          scale.style.display = "none";
+          grane.style.display = "block";
+        });
+      </script>
+
+      <p class="calibre1">Desenho original</p>
+      <p class="calibre1">
+        Um desenho como esse pode ser ampliado ou reduzido de tamanho. Para
+        ampliarmos ou reduzirmos é importante observar que todas as medidas da
+        figura precisam aumentar ou diminuir proporcionalmente para que a figura
+        não seja deformada. Dessa forma, obtém-se uma
+        <b class="calibre3">figura semelhante</b>.
+      </p>
+      <p class="calibre1">
+        Com o apoio de uma malha quadriculada, veja como podemos ampliar esse
+        desenho.
+      </p>
+
+      <p class="calibre1">Desenho ampliado</p>
+      <p class="calibre1">
+        O desenho acima é uma ampliação do desenho anterior. Suas medidas foram
+        multiplicadas por 2.
+      </p>
+      <p class="calibre1 pg">122</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+
+      <p class="calibre1">
+        Agora, vamos verificar como podemos reduzir uma figura usando uma malha
+        quadriculada.
+      </p>
+
+      <style>
+        .scales {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .scales img {
+          position: absolute;
+        }
+      </style>
+      <div class="scales_">
+        <div class="ori">
+          <img
+            src="../../resources/images/cruz.PNG"
+            alt="Desenho de uma cruz verde no centro de uma malha quadrada de 20 colunas e 18 linhas.  "
+          />
+          <p class="calibre1">Desenho original</p>
+        </div>
+        <div class="red">
+          <img
+            src="../../resources/images/cruzr.PNG"
+            alt="Desenho reduzido proporcionalmente. A malha quadrada foi reduzida para dez colunas e 8 linhas.
+"
+          />
+          <p>Desenho reduzido</p>
+        </div>
+      </div>
+
+      <script>
+        const ori = document.querySelector(".ori");
+        const red = document.querySelector(".red");
+
+        red.style.display = "none";
+
+        ori.addEventListener("click", () => {
+          ori.style.display = "none";
+          red.style.display = "block";
+        });
+      </script>
+
+      <p class="calibre1">
+        Para reduzirmos a figura acima em 4 vezes, vamos dividir cada uma das
+        medidas dos lados da figura por 4. Observe:
+      </p>
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+      <p class="calibre1 pg">123</p>
+
+      <p class="calibre1">
+        <b class="calibre3 subtitulo" id="section2"
+          >Ampliação e redução de figuras planas no plano cartesiano</b
+        >
+      </p>
+      <p>
+        Podemos construir uma figura plana no plano cartesiano indicando as
+        coordenadas dos seus vértices. Observe o quadrado abaixo de coordenadas
+        A(3, 5), B(5, 5), C(5, 3) e D(3, 3).
+      </p>
+      <img
+        src="../../resources/images/abcd_2.PNG"
+        alt="Figura de um plano cartesiano. Ele possui dois eixos: o x na horizontal e o y, na vertical. O eixo x é dividido em 12 partes e o y também em 12 partes. No plano cartesiano o desenho de um quadrado verde formado pela união das coordenadas A, B, C, D. A letra A está no ponto 3 do eixo x e 5 do eixo y. A letra B está no ponto 5 do x e 5 do y. A letra C, 5 do x e 3 do y. A letra D, 3 do x e 3 do y. 
+"
+      />
+
+      <p class="calibre1">
+        Para ampliarmos esse quadrado, basta multiplicarmos suas coordenadas por
+        um mesmo número, sendo este número maior que 1.
+      </p>
+      <p class="calibre1">
+        Vamos ampliar o quadrado acima multiplicando todas as suas coordenadas
+        por 2. Assim, teremos um novo quadrado ampliado de coordenadas E(6, 11),
+        F(10, 11), G(10, 7) e H(6, 7).
+      </p>
+      <img
+        src="../../resources/images/efhg.PNG"
+        alt="Figura de um plano cartesiano igual ao anterior com o quadrado verde e acrescido de um outro quadrado com o dobro do tamanho, à direita, na cor laranja, formado pela união das coordenadas E, F, G, H. A coordenada E está no ponto 6 do eixo x e 11 do eixo y. A letra F está no ponto 10 do x e 11 do y. A letra G, 10 do x e 7 do y. A letra H, 6 do x e 7 do y. "
+      />
+
+      <p class="calibre1">
+        Assim como podemos ampliar uma figura plana no plano cartesiano, é
+        possível fazer uma redução. Neste caso, devemos dividir todas as
+        coordenadas por um número maior que 1.
+      </p>
+      <p class="calibre1 pg">124</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+
+      <p class="calibre1">
+        No plano cartesiano abaixo temos o triângulo de vértices M(6, 12), N(6,
+        6) e O(12, 6).
+      </p>
+
+      <img
+        src="../../resources/images/mno.PNG"
+        alt="Figura de um plano cartesiano. Ele possui dois eixos: o x na horizontal e o y, na vertical. O eixo x é dividido em 12 partes e o y também em cinco partes. No plano cartesiano o desenho de um triângulo azul formado pela união das coordenadas M, N, O. A letra M está no ponto 6 do eixo x e 12 do eixo y. A letra N está no ponto 6 do x e 6 do y. A letra O, 12 do x e 6 do y.  "
+      />
+
+      <p class="calibre1">
+        Vamos reduzi-lo dividindo todas as suas coordenadas por 3. Dessa forma,
+        teremos um novo triângulo QRS de coordenadas Q(2, 4), R(2, 2) e S(4, 2).
+      </p>
+
+      <img
+        src="../../resources/images/qrs.PNG"
+        alt="Figura de um plano cartesiano igual ao anterior com o triângulo azul e acrescido de um outro triângulo em tamanho menor, à esquerda, na cor laranja formado com a união das coordenadas Q, R, S. A coordenada Q está no ponto 2 do eixo x e 4 do eixo y. A letra R está no ponto 2 do x e 2 do y. A letra S, 4 do x e 2 do y.  "
+      />
+
+      <p class="calibre1 destaque">ENCONTRE SOLUÇÕES</p>
+      <p class="calibre1">
+        1. Observe os desenhos 1 e 2 na malha quadriculada abaixo. Podemos
+        afirmar que o desenho 2 é uma ampliação do desenho 1? Justifique sua
+        resposta.
+      </p>
+      <img
+        src="../../resources/images/desenhos.PNG"
+        alt="Uma malha quadriculada com a mesma figura geométrica em tamanhos diferentes. A figura é um retângulo na horizontal com um triângulo na ponta direita com o vértice apontado também para a direita. O desenho 1 ocupa o espaço de 12 quadrados. O desenho 2 ocupa o espaço de 44 quadrados. "
+      />
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+      <p class="calibre1 pg">125</p>
+
+      <p class="calibre1">
+        2. Em uma malha quadriculada, faça a redução da figura abaixo e, em seu
+        caderno, justifique como realizou a redução.
+      </p>
+      <img
+        src="../../resources/images/malha.PNG"
+        alt="Uma malha quadriculada com o desenho de uma figura formada por quatro retângulos, ocupando cada um, 18 quadrados. São dois retângulos, à esquerda, e mais dois, à direita. Os da esquerda formam o número sete com um retângulo na horizontal na cor laranja clara e o outro laranja escuro na vertical. Os retângulos da esquerda formam a letra L com um retângulo na vertical laranja escuro e o outro na horizontal laranja claro. Os retângulos da esquerda estão localizados três andares acima dos retângulos da direita.
+ "
+      />
+
+      <p class="calibre1">
+        3. Em um papel quadriculado, construa um plano cartesiano e faça a
+        ampliação do polígono ABCD abaixo. Escreva em seu caderno as coordenadas
+        do polígono ABCD e do polígono ampliado, justificando a sua resposta.
+      </p>
+      <img
+        src="../../resources/images/dacb.PNG"
+        alt="Figura de um plano cartesiano. Ele possui dois eixos: o x, na horizontal, e o y, na vertical. O eixo x é dividido em 12 partes e o y também em 12 partes. No plano cartesiano o desenho de um losango roxo é formado pela união das coordenadas A, B, C, D. A letra A está no ponto 4 do eixo x e 4 do eixo y. A letra B está no ponto 6 do x e 3 do y. A letra C, 4 do x e 2 do y. A letra D, 2 do x e 3 do y.  "
+      />
+
+      <p class="calibre1">
+        4. Considere um polígono de coordenadas M(14, 8), N(10, 6) e O(8, 10).
+        Podemos afirmar que um polígono de coordenadas A(7, 4), B(5, 3) e C(2,
+        5) é uma redução do polígono MNO? Justifique a sua resposta.
+      </p>
+      <p class="calibre1">
+        5. Em um papel quadriculado, construa um plano cartesiano e faça a
+        redução do polígono ABCDEFGH. Escreva em seu caderno as coordenadas do
+        polígono abaixo e do polígono reduzido, justificando a sua resposta.
+      </p>
+      <img
+        src="../../resources/images/hbag.PNG"
+        alt="Figura de um plano cartesiano. Ele possui dois eixos: o x, na horizontal, e o y, na vertical. O eixo x é dividido em 12 partes e o y também em 12 partes. No plano cartesiano o desenho de um polígono amarelo no formato da letra C, a partir da união das coordenadas: A, B, C, D, E, F, G, H. A letra A está no ponto 6 do eixo x e 12 do eixo y. A letra B está no 12 do x e 12 do y. A letra C, 12 do x e 9 do y. A letra D, 9 do x e 8 do y. A letra E, 9 do x, 6, do y. A letra F, 12 do x e 6 do y. A letra G, 12 do x e 3 do y. A letra H, 6 do x e 3 do y. "
+      />
+
+      <p class="calibre1 pg">126</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+
+      <p class="calibre1 destaque">PROBABILIDADE E ESTATÍSTICA</p>
+      <p class="calibre1">
+        ► <b class="calibre3" id="section3">Educação no trânsito </b>
+      </p>
+
+      <div class="card">
+        <p class="calibre1">https://www.saude.mg.gov.br/vidanotransito</p>
+        <p>
+          <b class="calibre3"
+            >Respeito e responsabilidade: pratique no trânsito</b
+          >
+        </p>
+        <p class="calibre1">[…]</p>
+        <p class="calibre1">
+          Para a OMS os Acidentes de Transporte Terrestre constituem grave
+          problema mundial decorrente do impacto na morbimortalidade,
+          particu-larmente na população mais jovem e predominantemente do sexo
+          mas-culino. Esses acidentes exercem forte impacto sobre os serviços de
+          saúde, pelas altas demandas principalmente nos serviços públicos de
+          emergên-cia, de assistência especializada, de reabilitação física,
+          psicológica e de assistência social, bem como para a sociedade em
+          geral.
+        </p>
+        <p class="calibre1">[…]</p>
+        <p class="calibre1">
+          MINAS GERAIS. Secretaria de Estado de Saúde.
+          <b class="calibre3">Respeito e responsabilidade</b>: pratique no
+          trânsito. Disponível em: https://www.saude.mg.gov.br/vidanotransito.
+          Acesso em: 14 mar. 2022.
+        </p>
+      </div>
+
+      <p class="calibre1">
+        Observe a seguir alguns gráficos que trazem informações que demons-tram
+        o total de internações por causas externas no estado de Minas Gerais.
+      </p>
+      <div class="center">
+        <p class="calibre1">
+          <b class="calibre3"
+            >Gráfico A - Distribuição das internações hospitalares no SUS Geral,
+            segundo categoria. Minas Gerais, 2010 a 2021*.</b
+          >
+        </p>
+      </div>
+
+      <img
+        src="../../resources/images/intema.PNG"
+        alt="Gráfico de barras verticais com o título “Distribuição das internações hospitalares no SUS Geral, segundo categorias. Minas Gerais, 2010 a 2021”. O gráfico é composto por dois eixos: um à esquerda com o título “Quantidade de internações”. O eixo é vertical e está numerada desde a base pelos números: 0, 20 mil, 40 mil, 60 mil, 80 mil, 100 mil, 120 mil. O segundo eixo está na horizontal, na base do gráfico com o título “Meios de Transporte”. São cinco pares de barras verticais nas cores azul e laranja. Azul representa os homens e Laranja, as mulheres. No primeiro par, nomeado de “a pé”, 32 mil 779 são homens e 16 mil 171 mulheres. O segundo par é “Bicicleta”, sendo 17 mil 249 homens, e 3 mil 432 mulheres. O terceiro par é ”motocicleta”, 99 mil 554 homens e 16 mil 990 mulheres. O quarto par é “automóvel”, 2 ml e sete homens e 8 mil 276 mulheres. O quinto par é “outros”, sendo 18 mil 647 homens e 5 mil 133 mulheres. No canto inferior esquerdo: Fonte: Ministério da Saúde – Sistema de informações hospitalares do SUS (SIH/SUS). *Dados retirados em 24 de maio de 2021. "
+      />
+      <legend>Meios de transporte</legend>
+      <p class="calibre1">
+        Fonte: Ministério da Saúde - Sistema de informações hospitalares do SUS
+        (SIH/SUS).
+      </p>
+      <p class="calibre1">*Dados retirados em 26/04/2021.</p>
+      <div class="d-flex">
+        <p class="calibre1">
+          1. Converse com um colega e, em seus cadernos, escrevam um texto
+          rela-tando as informações que aparecem no gráfico A.
+        </p>
+        <img src="../../resources/images/i5.PNG" alt="Ícone Em Dupla" />
+      </div>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+      <p class="calibre1 pg">127</p>
+
+      <div class="d-flex">
+        <img src="../../resources/images/i1.PNG" alt="Ícone troca de ideias" />
+        <p class="calibre1">
+          2. Converse com um colega e, em seus cadernos, escrevam um texto
+          rela-tando as informações que aparecem no gráfico B.
+        </p>
+      </div>
+      <div class="center">
+        <p class="calibre1">
+          <b class="calibre3"
+            >Gráfico B - Distribuição das internações hospitalares no SUS
+            Geral</b
+          >
+          <b class="calibre3"
+            >Acidentes de Transporte Terrestre, segundo faixa etária.
+          </b>
+        </p>
+        <p class="calibre1">
+          <b class="calibre3">Minas Gerais, 2010 a 2021*. </b>
+        </p>
+      </div>
+
+      <img
+        src="../../resources/images/intema2.PNG"
+        alt="Gráfico de barras verticais com o título “Gráfico B – Distribuição das internações hospitalares no SUS Geral Acidentes de Transporte Terrestre, segundo faixa etária. Minas Gerais, 2010 a 2021*.” O gráfico é composto por dois eixos: um à esquerda com o título “Quantidade de internações”. O eixo é vertical e está numerada desde a base pelos números: zero, 10 mil, 20 mil, 30 mil, 40 mil, 50 mil, 60 mil, 70 mil, 80 mil. O segundo eixo está na horizontal, na base do gráfico com o título “Faixa Etária”. São 12 barras verticais verdes: “Menor de um ano” corresponde a 407 internações. “1 a 4 anos” 2.562. “5 a 9 anos” 5.635. “10 a 14 anos” 8.571. “15 a 19 anos” 24.465. “20 a 29 anos” 67.279. “30 a 39 anos” 48.344. “40 a 49 anos” 35.483. “50 a 59 anos” 24.166. “60 a 69 anos” 12.434. “70 a 79 anos” 6.543. “80 anos ou mais” 3.349.  No canto inferior esquerdo: Fonte: Ministério da Saúde – Sistema de informações hospitalares do SUS (SIH/SUS). *Dados retirados em 24 de maio de 2021.
+"
+      />
+
+      <p class="calibre1">Faixa etária</p>
+      <p class="calibre1">
+        Fonte: Ministério da Saúde - Sistema de informações hospitalares do SUS
+        (SIH/SUS).
+      </p>
+      <p class="calibre1">*Dados retirados em 26/04/2021.</p>
+      <p class="calibre1">
+        3. Troque ideias com seu colega, façam uma pesquisa e escrevam
+        suges-tões de práticas saudáveis no trânsito para pedestres,
+        passageiros, ciclistas, motociclistas e motoristas.
+      </p>
+      <p class="calibre1 destaque" id="section4">RELEMBRE</p>
+
+      <p>
+        1. Nas situações a seguir, escreva, em seu caderno, se elas nos dão
+        ideia de ponto, reta ou plano.
+      </p>
+      <p>a) Um grão de areia.</p>
+      <p>b) A superfície do mar calmo.</p>
+      <p>c) O horizonte.</p>
+
+      <p>
+        2. Observe as retas a seguir. Quais retas são paralelas? Quais retas são
+        concorrentes?
+      </p>
+      <img
+        src="../../resources/images/tmn.PNG"
+        alt="Figura de duas semirretas em paralelo. A de cima nomeada de m e a debaixo de n. Uma outra semirreta nomeada de “t” cruza as outras duas na diagonal."
+      />
+
+      <p>
+        3. Leia as afirmações a seguir e escreva, em seu caderno, V para as
+        afirmações verdadeiras e F para as falsas, corrigindo as que forem
+        falsas.
+      </p>
+      <p>a) Um ângulo agudo mede 90º.</p>
+      <p>b) Um ângulo é formado por semirretas.</p>
+      <p>c) Um ângulo pleno é um ângulo que mede 180º.</p>
+      <p>d) O instrumento utilizado para medir um ângulo é o esquadro.</p>
+      <p>
+        e) Um ângulo obtuso é um ângulo que mede mais que 90º e menos que 180º.
+      </p>
+      <p>f) Um ângulo raso mede o dobro da medida de um ângulo reto.</p>
+
+      <p class="calibre1 pg">128</p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+
+      <p class="calibre1 destaque">RELEMBRE</p>
+      <p>
+        4. Observe os triângulos na malha quadriculada a seguir. Em seu caderno,
+        classifique cada um deles de acordo com a medida de seus lados e de seus
+        ângulos.
+      </p>
+      <img
+        src="../../resources/images/r1.PNG"
+        alt="Na malha quadriculada, cinco triângulos nomeados de A, B, C, D, E. O triângulo da letra A é amarelo. Ele ocupa na base 3 quadrados e nas laterais em diagonal passam por três quadrados. O triângulo B é verde. Ele ocupa na base 3 quadrados, a lateral esquerda diagonal passa por três quadrados. A lateral direita é uma linha na vertical no tamanho de três quadrados. O triângulo C é branco. Ele ocupa na base 4 quadrados e nas laterais em diagonal tem a altura de três quadrados. O triângulo D é azul. Ele ocupa na base quatro quadrados. A lateral esquerda é uma linha vertical com a altura de dois andares. A lateral direita liga-se à esquerda em diagonal. O triângulo E tem na base o tamanho de três quadrados. A lateral esquerda é uma diagonal e passa por dois quadrados em direção à esquerda da malha. A lateral direita também é uma diagonal voltada para a esquerda. "
+      />
+      <p>
+        5. Na malha quadriculada a seguir foram representados alguns
+        quadriláteros. Em seu caderno, escreva o nome de cada um deles.
+      </p>
+
+      <img
+        src="../../resources/images/r2.PNG"
+        alt="Na malha quadriculada, seis quadriláteros, nomeados de A, B, C, D, E, F. O quadrilátero da letra A é branco. Ele ocupa na base e na parte superior três quadrados. As laterais têm a altura de dois quadrados. O B é laranja tem na base o tamanho de 3 quadrados. A parte superior é menor que a base. As laterais se ligam da base a parte superior em diagonais. O C, em azul, tem a forma de um quadrado inclinado à direita. O D, em branco, tem a base maior que a parte de cima. A lateral esquerda é uma linha na vertical.  A lateral direita é uma diagonal inclinada para a esquerda. O E, em amarelo, é a união de dois triângulos: um em cima e o outro embaixo. O de cima tem o vértice para cima e o de baixo o vértice para baixo. O F, em verde, tem quatro lados iguais, cada um ocupando dois quadrados. 
+"
+      />
+
+      <div class="d-flex">
+        <p>
+          6. Utilizando 24 palitos de fósforo Marcos construiu 6 quadrados
+          congruentes como mostra a figura.
+        </p>
+        <img src="../../resources/images/i5.PNG" alt="Ícone em dupla" />
+      </div>
+      <img
+        src="../../resources/images/palitos5.PNG"
+        alt="Figura com 24 palitos. Os seis quadrados estão dispostos em duas linhas. São 3 quadrados, na parte de cima, e 3, na linha debaixo. Todos os seis quadrados se intercalam com espaços em branco. "
+      />
+      <p>
+        ► Agora é a sua vez! Utilizando a mesma quantidade de palitos, em dupla,
+        construam uma figura com 7 quadrados congruentes e depois outra com 8
+        quadrados congruentes.
+      </p>
+      <p>7. Desenhe, em seu caderno, a próxima figura desta sequência.</p>
+      <img
+        src="../../resources/images/r3.PNG"
+        alt="Três figuras amarelas. A primeira é um triângulo com um círculo dentro. A segunda é um círculo com um triângulo dentro. A terceira é um quadrado com um círculo dentro."
+      />
+      <p>
+        8. (Saresp) Observe a tabela abaixo e veja como ela foi organizada. O
+        espaço destinado a figuras quadrangulares vermelhas é:
+      </p>
+      <img
+        src="../../resources/images/r4.PNG"
+        alt="Tabela com 4 linhas e 4 colunas. Linha 1, a partir da segunda coluna: Vermelhas, Azuis, Verdes. Linha 2: Triangulares. Um triângulo vermelho, (I) na coluna azuis, um triângulo verde. Linha 3: Quadrangulares. (II) na coluna vermelhas. Um retângulo azul. (III) na coluna verdes. Linha 4: Pentagonais. Um pentágono vermelho. (IV) na coluna azuis. Um pentágono verde. "
+      />
+
+      <div class="d-flex">
+        <p>a) I</p>
+        <p>b) II</p>
+        <p>c) III</p>
+        <p>d) IV</p>
+      </div>
+
+      <p>9. Agora vamos montar um quadrado utilizando 4 peças iguais a esta.</p>
+      <img
+        src="../../resources/images/r5.PNG"
+        alt="Figura azul formada com quatro quadrados. Três na horizontal e o quarto quadrado está abaixo do segundo acima. 
+"
+      />
+      <p>
+        ► Nos anexos você encontrará as peças que precisa para montar o
+        quadrado. Reproduza-as e divirta- se.
+      </p>
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+      <p class="calibre1 pg">129</p>
+
+      <p>
+        10. Escreva em seu caderno as coordenadas dos pontos indicados no plano
+        cartesiano.
+      </p>
+      <img
+        src="../../resources/images/r6.PNG"
+        alt="Figura de um plano cartesiano. Ele possui dois eixos: o x, na horizontal, e o y, na vertical. O eixo x é dividido em 12 partes e o y também. No plano cartesiano, sete pontos nomeados de A, B, C, D, E, F, G. A letra A está no ponto 4 do eixo x e 11 do eixo y. A letra B está no ponto 9 do x e 8 do y. A letra C, 6 do x e 5 do y. A letra D, 9 do x e zero do y. A letra E está no ponto 12 do x e 2 do y. A letra F está no ponto 3 do x e 3 do y. A letra G, zero do x e 7 do y.
+ 
+"
+      />
+      <p>
+        11. Na malha quadriculada temos desenhadas as figuras I e II. Podemos
+        afirmar que a figura II é uma redução da figura I? Justifique sua
+        resposta.
+      </p>
+      <img
+        src="../../resources/images/r7.PNG"
+        alt="Em uma malha quadriculada a figura de dois hexágonos amarelos. A figura 1 tem as laterais esquerda e direita ocupando cada uma quatro andares. A figura 2 tem as laterais esquerda e direita ocupando dois andares. "
+      />
+
+      <p>12. Você sabe o que é sinalização de trânsito?</p>
+
+      <div class="cardcolor">
+        <p>
+          O Código de Trânsito Brasileiro define sinalização de trânsito como
+          sendo um conjunto de sinais de trânsito e dispositivos de segurança
+          colocados na via pública com o objetivo de garantir sua utilização
+          adequada, possibilitando melhor fluidez no trânsito e maior segurança
+          dos veículos e pedestres que nela circulam.
+        </p>
+      </div>
+
+      <p>a) Em sua opinião, a sinalização no trânsito é respeitada?</p>
+      <p>
+        b) O que poderia ser feito para evitar que ocorram tantos acidentes de
+        trânsito no Brasil?
+      </p>
+      <p>
+        c) A seguir, temos representadas algumas placas de trânsito que nos
+        lembram alguns polígonos. Escreva, em seu caderno, o que significa cada
+        placa e o nome do polígono que cada uma delas nos lembra.
+      </p>
+
+      <img
+        src="../../resources/images/r8.PNG"
+        alt="Quatro placas duas em cima e duas abaixo. A primeira em cima e à esquerda tem seis lados iguais e a cor é vermelha. No centro dela em branco: Pare. A segunda placa à direita tem a cor bordô. No centro dela o desenho de uma pessoa pescando em um rio. Abaixo do desenho: Pesca Esportiva. Abaixo à esquerda, uma placa bordô. No centro o desenho de um ônibus. Abaixo de desenho: Terminal Rodoviário. A quarta placa à esquerda e abaixo tem a forma de um triângulo com o vértice apontado para baixo. Ele tem uma borda grossa vermelha e o centro é um triângulo invertido na cor branca. "
+      />
+
+      <p>
+        13. (Saresp) Dentre os mosaicos abaixo, aquele que é formado somente por
+        quadriláteros é:
+      </p>
+      <div class="d-flex">
+        <p>a)</p>
+        <img
+          src="../../resources/images/r9.PNG"
+          alt="Letra a. Mosaico retangular na horizontal e nas cores amarela e azul formado por 45 figuras geométricas. As figuras em amarelo são hexágonas. Elas rodeiam figuras azuis no formato de estrelas. As estrelas são quatro triângulo na parte central: o primeiro e o segundo com o vértice para cima e o segundo e o quarto com o vértice para baixo. À esquerda dos triângulos centrais, dois paralelogramos. À direita dos triângulos centrais, mais dois paralelogramos. "
+        />
+      </div>
+      <div class="d-flex">
+        <p>b)</p>
+        <img
+          src="../../resources/images/r20.PNG"
+          alt="Letra b. Mosaico retangular na vertical e em perspectiva nas cores azul verde, amarelo, e marrom formado por 16 figuras geométricas. Quatro quadrados azuis estão localizados nas quinas do mosaico. O restante do mosaico é preenchido por uma cruz. Em cada ponta da cruz, um triângulo aponta o vértice para o centro.  Mais ao centro, formando o centro da cruz, oito paralelogramas. "
+        />
+      </div>
+      <div class="d-flex">
+        <p>c)</p>
+        <img
+          src="../../resources/images/r11.PNG"
+          alt="Letra C. Mosaico retangular na horizontal e em perspectiva. Quatro retângulos horizontais de cima para baixo: o primeiro é verde, o segundo amarelo, o terceiro verde, o quarto amarelo. Nos dois primeiros retângulos quatro losangos na cor azul marinho. O mesmo repete na parte de baixo, nos dois últimos retângulos. "
+        />
+      </div>
+      <div class="d-flex">
+        <p>d)</p>
+        <img
+          src="../../resources/images/r12.PNG"
+          alt="Letra d. Mosaico retangular na horizontal e em perspectiva. Mosaico formado por hexágonos, que lembram colmeias, totalizando vinte e uma. Na parte de cima, os hexágonos se intercalam em verde e amarelo. São quatro verdes e três amarelas. As amarelas estão cortadas pela metade. Abaixo, mais ao centro, três hexágonos vermelhos. Abaixo de cada um deles, um hexágono verde. Na base do mosaico, as colmeias são vermelhas e estão cortadas pela metade. "
+        />
+      </div>
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+      <p class="calibre1 pg">130</p>
+
+      <p class="calibre1">UNIDADE 3 - CAPÍTULO 6</p>
+      <p class="calibre1 pg">131</p>
+    </main>
+  </body>
+</html>

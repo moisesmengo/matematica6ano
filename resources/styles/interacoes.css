@@ -24,13 +24,15 @@
   position: relative;
   max-width: 500px;
 }
-.carousel_item img {
+.carousel_item img,
+.c2 img {
   width: 100%;
   display: block;
   height: 100%;
   object-fit: contain;
 }
 .carousel_item,
+.c2,
 .carousel_item_hidden {
   display: none;
 }
@@ -72,6 +74,12 @@
   to {
     opacity: 1;
   }
+}
+
+.c2 .carousel_visible {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 /* pg25 */
@@ -157,7 +165,7 @@
 }
 [data-dropdown]:hover .dropdownmenu,
 [data-dropdown].ativo .dropdownmenu {
-  display: block ;
+  display: block;
   animation: showup 0.6s forwards;
 }
 .dropdownmenu li a:hover {
@@ -176,4 +184,16 @@
     opacity: 1;
     transform: translate3d(0, 0, 0);
   }
+}
+
+summary {
+  font-size: 20px !important;
+  cursor: pointer;
+  background: #0080c8;
+  color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+}
+details {
+  margin-bottom: 10px;
 }

@@ -18,14 +18,15 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../resources/styles/style.css" />
+    <link rel="stylesheet" href="../../resources/styles/interacoes.css" />
   </head>
   <body>
-    <main class="container">
-      <p class="calibre1 titulo" id="section1">
+    <main class="container u2c2">
+      <p class="calibre1 titulo">
         CAPÍTULO 2 - Multiplicação e divisão de números naturais
       </p>
 
-      <p class="calibre1 subtitulo" id="section2">
+      <p class="calibre1 subtitulo" id="section1">
         <b class="calibre3">Multiplicação</b>
       </p>
       <p class="calibre1"><b class="calibre3">Situação 1</b></p>
@@ -79,15 +80,26 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
 
       <div class="grid2">
         <div>
-          <p>Algoritmo usual:</p>
-          <img src="../../resources/images/alg63.PNG" alt="Algoritmo usual" />
+          <details>
+            <summary>Algoritmo usual:</summary>
+            <p>
+              <img
+                src="../../resources/images/alg63.PNG"
+                alt="Algoritmo usual"
+              />
+            </p>
+          </details>
         </div>
         <div>
-          <p>Algoritmo por decomposição:</p>
-          <img
-            src="../../resources/images/alg632.PNG"
-            alt="Algoritmo por decomposição"
-          />
+          <details>
+            <summary>Algoritmo por decomposição:</summary>
+            <p>
+              <img
+                src="../../resources/images/alg632.PNG"
+                alt="Algoritmo por decomposição"
+              />
+            </p>
+          </details>
         </div>
       </div>
 
@@ -139,10 +151,38 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
 
       <p class="calibre1">Observe:</p>
 
-      <img
-        src="../../resources/images/63__.PNG"
-        alt="Esquema com três itens: Sucos, Sanduíches e Gelatinas, dividido em três partes nas cores verde, rosa, amarelo, totalizando 18 possibilidades. Na parte verde: Suco de Laranja com duas flexas, uma aponta para o Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi. Na parte rosa: Suco de Morango com duas flexas, uma aponta para Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi. Na parte amarela: Suco de manga com duas flexas, uma aponta para o Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi."
-      />
+      <div
+        class="carousel"
+        aria-label="Esquema com três itens: Sucos, Sanduíches e Gelatinas, dividido em três partes nas cores verde, rosa, amarelo, totalizando 18 possibilidades. Na parte verde: Suco de Laranja com duas flexas, uma aponta para o Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi. Na parte rosa: Suco de Morango com duas flexas, uma aponta para Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi. Na parte amarela: Suco de manga com duas flexas, uma aponta para o Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi."
+      >
+        <div class="carousel_item carousel_visible">
+          <img
+            src="../../resources/images/verede.PNG"
+            alt="Na parte verde: Suco de Laranja com duas flexas, uma aponta para o Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi. "
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/rosa.PNG"
+            alt="Na parte rosa: Suco de Morango com duas flexas, uma aponta para Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi."
+          />
+        </div>
+        <div class="carousel_item">
+          <img
+            src="../../resources/images/amarelo.PNG"
+            alt=" Na parte amarela: Suco de manga com duas flexas, uma aponta para o Frango e a outra para o Atum. Do frango saem mais três flexas: Limão, Framboesa e Abacaxi. Do atum, também três flexas: Limão, Framboesa e Abacaxi."
+          />
+        </div>
+
+        <div class="carousel_actions" style="opacity: 0.3">
+          <button class="prev" id="carousel-prev" aria-label="Slide anterior">
+            ❮
+          </button>
+          <button class="next" id="carousel-next" aria-label="Próximo slide">
+            ❯
+          </button>
+        </div>
+      </div>
 
       <p class="calibre1 pg">62</p>
       <p class="calibre1">UNIDADE 2 - CAPÍTULO 2</p>
@@ -595,7 +635,7 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
           src="../../resources/images/000033.png"
           alt="Ao redor da Situação 1, acima e do lado esquerdo, a ilustração de estantes com livros. "
         />
-        <p class="calibre1" id="section3">
+        <p class="calibre1" id="section2">
           <b class="calibre5 subtitulo">Divisão</b>
         </p>
         <h2 class="calibre3"><b class="calibre4">Situação 1</b></h2>
@@ -674,18 +714,26 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
 
         <div class="grid2">
           <div>
-            <p>Algoritmo usual:</p>
-            <img
-              src="../../resources/images/71ex.PNG"
-              alt="Exemplo Algoritmo usual:"
-            />
+            <details>
+              <summary>Algoritmo usual:</summary>
+              <p>
+                <img
+                  src="../../resources/images/71ex.PNG"
+                  alt="Exemplo Algoritmo usual:"
+                />
+              </p>
+            </details>
           </div>
           <div>
-            <p>Divisão por partes:</p>
-            <img
-              src="../../resources/images/71ex2.PNG"
-              alt="Exemplo Divisão por partes:"
-            />
+            <details>
+              <summary>Divisão por partes:</summary>
+              <p>
+                <img
+                  src="../../resources/images/71ex2.PNG"
+                  alt="Exemplo Divisão por partes:"
+                />
+              </p>
+            </details>
           </div>
         </div>
 
@@ -859,7 +907,7 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       <p class="calibre1 pg">71</p>
 
       <h2 class="calibre3">
-        <b class="calibre4 subtitulo" id="section4">Expressões numéricas</b>
+        <b class="calibre4 subtitulo" id="section3">Expressões numéricas</b>
       </h2>
       <p class="calibre1">
         Nas expressões numéricas que envolvem adição, subtração, multiplicação e
@@ -1050,6 +1098,7 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
 
       <p class="calibre1 pg">74</p>
       <p class="calibre1">UNIDADE 2 - CAPÍTULO 2</p>
+      <script type="module" src="../../resources/scripts/main.js"></script>
     </main>
   </body>
 </html>

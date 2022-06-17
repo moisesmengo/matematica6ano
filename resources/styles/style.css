@@ -128,7 +128,11 @@ table td {
   border: 1px solid #0080c8;
   padding: 3px 8px;
 }
-
+legend {
+  min-width: 300px;
+  max-width: 90%;
+  overflow-x: auto;
+}
 ul {
   margin-left: 20px;
   margin-bottom: 10px;
