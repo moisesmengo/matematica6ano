@@ -173,6 +173,27 @@ ul {
   font-weight: bold;
 }
 
+.fat {
+  display: flex;
+}
+.fat * {
+  display: block;
+  font-size: 20px;
+}
+.esq,
+.dir {
+  padding: 0 10px;
+}
+.esq {
+  border-right: 1px solid #000;
+}
+
+.lista li{
+  margin-left: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
 @keyframes showup {
   from {
     opacity: 0;
