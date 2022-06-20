@@ -197,3 +197,7 @@ summary {
 details {
   margin-bottom: 10px;
 }
+
+.img-carousel-full{
+  width: 100% !important;
+}

@@ -160,3 +160,36 @@ if (botaoRegrasMdc54) {
         }
     })
 }
+
+
+const botaoRegrasMdc4612 = document.getElementById('botao-mdc4612');
+if (botaoRegrasMdc4612) {
+    botaoRegrasMdc4612.addEventListener('click', () => {
+        regrasMdc4612cultadosEsquerda = document.querySelectorAll('.mdc4612-esquerda')
+        regrasMdc4612cultadosDireita = document.querySelectorAll('.mdc4612-direita')
+        var contEsquerda = regrasMdc4612cultadosEsquerda.length;
+        var contDireita = regrasMdc4612cultadosDireita.length;
+        if (regrasMdc4612cultadosEsquerda.length >= 1) {
+
+            regrasMdc4612cultadosEsquerda[regrasMdc4612cultadosEsquerda.length - contEsquerda].classList.remove('regras-oculta');
+            regrasMdc4612cultadosEsquerda[regrasMdc4612cultadosEsquerda.length - contEsquerda].classList.remove('mdc4612-esquerda');
+            contEsquerda--;
+
+            if (regrasMdc4612cultadosDireita.length > 0) {
+                regrasMdc4612cultadosDireita[regrasMdc4612cultadosDireita.length - contDireita].classList.remove('regras-oculta');
+                regrasMdc4612cultadosDireita[regrasMdc4612cultadosDireita.length - contDireita].classList.remove('mdc4612-direita');
+                contDireita--;
+            }
+        }
+    })
+}
+// PG 158
+
+const botaoTang = document.getElementById('alert-tang');
+botaoTang.addEventListener('click', () => {
+    swal({
+        title: "T’ang (618-906)",
+        text: "Durante a dinastia Tang, a China conheceu uma fase de grande prosperidade e progresso técnico e material. Entre as inovações que marcaram o período está o aparecimento do primeiro relógio mecânico, no ano 732, inventado por um monge chinês.",
+        icon: "warning",
+    });
+});
