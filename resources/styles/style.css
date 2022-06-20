@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -6,52 +7,64 @@
   color: #000;
   font-family: "Roboto", sans-serif;
 }
+
 html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 .container {
   margin: 10px auto;
   width: 800px;
 }
+
 p {
   font-size: 18px;
   line-height: 1.4;
   margin-bottom: 12px;
 }
+
 img {
   max-width: 100%;
   display: block;
   margin-top: 20px;
   margin-bottom: 10px;
 }
+
 h1 {
   margin-top: 10px;
   margin-bottom: 20px;
 }
+
 .mt40 {
   margin-top: 40px;
 }
+
 .mt20 {
   margin-top: 20px;
 }
+
 .card,
 .cardcolor {
   padding: 30px;
   border: 2px solid #000;
   margin: 20px auto;
 }
+
 .cardcolor {
   border: none;
   background: #7fc4ec;
   border-radius: 8px;
 }
+
 .center {
   text-align: center;
 }
+
 .bold {
   font-weight: bold;
 }
+
 .titulo,
 .subtitulo {
   font-size: 42px;
@@ -59,6 +72,7 @@ h1 {
   color: #0080c8;
   margin-bottom: 30px;
 }
+
 .subtitulo {
   font-size: 28px;
   margin-bottom: 10px;
@@ -70,9 +84,11 @@ h1 {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
 .sessoes_do_livro .grid2 {
   grid-template-columns: 2fr 1fr;
 }
+
 .grid3 {
   grid-template-columns: repeat(3, 1fr);
 }
@@ -88,6 +104,7 @@ h1 {
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   border-radius: 4px;
 }
+
 .pg {
   padding: 4px;
   background: #0080c8;
@@ -116,23 +133,28 @@ table {
   border-collapse: collapse;
   width: 100%;
 }
+
 table thead {
   background: #0080c8;
 }
+
 table thead th {
   color: #fff;
   padding: 8px;
   font-size: 18px;
 }
+
 table td {
   border: 1px solid #0080c8;
   padding: 3px 8px;
 }
+
 legend {
   min-width: 300px;
   max-width: 90%;
   overflow-x: auto;
 }
+
 ul {
   margin-left: 20px;
   margin-bottom: 10px;
@@ -142,10 +164,12 @@ ul {
 .sup2 {
   display: inline-block;
 }
+
 .sup2 {
   display: inline-block;
   border-top: 1px solid #000;
 }
+
 .sup1::before,
 .sup2::before {
   content: "";
@@ -154,19 +178,23 @@ ul {
   background: #000;
   display: block;
 }
+
 .semireta {
   display: inline-block;
   position: relative;
 }
+
 .semireta::before {
   content: "➝";
   display: block;
   position: absolute;
   top: -12px;
 }
+
 .sup2::before {
   margin-top: 2px;
 }
+
 .destaque {
   border-bottom: 2px solid #0080c8;
   margin: 20px 0 20px 0;
@@ -176,22 +204,37 @@ ul {
 .fat {
   display: flex;
 }
+
 .fat * {
   display: block;
   font-size: 20px;
 }
+
 .esq,
 .dir {
   padding: 0 10px;
 }
+
 .esq {
   border-right: 1px solid #000;
 }
 
-.lista li{
+.lista li {
   margin-left: 20px;
   font-size: 18px;
   line-height: 1.6;
+}
+
+#botao-regras, #botao-box, .botao-acao {
+  cursor: pointer;
+}
+#botao-regras:hover, #botao-box:hover, .botao-acao:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.regras-oculta {
+  display: none;
 }
 
 @keyframes showup {
@@ -199,6 +242,7 @@ ul {
     opacity: 0;
     transform: translate3d(0, 30px, 0);
   }
+
   to {
     opacity: 1;
     transform: translate3d(0, 0, 0);
@@ -209,20 +253,25 @@ ul {
   .container {
     width: 90%;
   }
+
   p {
     font-size: 16px;
   }
+
   .titulo {
     font-size: 28px;
     line-height: 1.2;
   }
+
   .subtitulo {
     font-size: 20px;
   }
+
   .grid2,
   .sessoes_do_livro .grid2 {
     grid-template-columns: 1fr !important;
   }
+
   .d-flex {
     flex-direction: column;
   }
