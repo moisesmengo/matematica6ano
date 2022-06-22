@@ -17,6 +17,10 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
     <meta name="robots" content="noindex, nofollow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../../resources/styles/style.css" />
+    <link rel="stylesheet" href="../../resources/styles/interacoes.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css"
+        integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+
   </head>
   <body>
     <main class="container">
@@ -601,19 +605,19 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         das ideias da multiplicação é a adição de parcelas iguais, temos:
       </p>
 
-      <img
-        src="../../resources/images/barra4.PNG"
-        alt="Uma barra na horizontal dividida em sete retângulos. Os dois primeiros na cor amarelo escuro. Acima dele, a fração 2/7. Os outros dois seguintes em amarelo claro. Acima deles, a fração 2/7. Os últimos três retângulos estão em branco.  Abaixo dos retângulos amarelos claros e escuros a fração 4/7. "
-      />
-      <details>
-        <summary>Observe seus elementos:</summary>
-        <p>
-          <img
-            src="../../resources/images/raiz.PNG"
-            alt="Exemplo de raiz quadrada"
+     
+      <div class="cardcolor u2c2">
+        <details>
+          <summary>Inforgráfico:</summary>
+          <p>
+            <img
+            src="../../resources/images/barra4.PNG"
+            alt="Uma barra na horizontal dividida em sete retângulos. Os dois primeiros na cor amarelo escuro. Acima dele, a fração 2/7. Os outros dois seguintes em amarelo claro. Acima deles, a fração 2/7. Os últimos três retângulos estão em branco.  Abaixo dos retângulos amarelos claros e escuros a fração 4/7. "
           />
-        </p>
-      </details>
+          </p>
+        </details>
+      </div>
+     
       <p class="calibre1">
         Observe outra maneira de efetuar a multiplicação: 2.<sup>2</sup>/<sub
           >7</sub
@@ -1173,30 +1177,45 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       <p class="calibre1">
         Lembrando-nos da potenciação com números naturais, temos:
       </p>
-      <p>3<sup>4</sup> = <u>3 ∙ 3 ∙ 3 ∙ 3</u> = 81</p>
+      <div class="cardcolor u2c2">
+        <details>
+          <summary>3<sup style="color:#FFF">4</sup></summary>
+          <p>3<sup>4</sup> = <u>3 ∙ 3 ∙ 3 ∙ 3</u> = 81</p>
+        </details>
+      </div>
       <p class="calibre1">4 fatores</p>
       <p class="calibre1">
         Para calcular uma potência com números fracionários, usaremos o mesmo
         raciocínio. Veja alguns exemplos.
       </p>
 
-      <img
-        src="../../resources/images/expoe.PNG"
-        alt="exemplo de potência em fração"
-      />
+     
 
       <p>
-        (<sup>1</sup>/<sub>2</sub>)<sup>5</sup> = <sup>1</sup>/<sub>2</sub> .
-        <sup>1</sup>/<sub>2</sub> . <sup>1</sup>/<sub>2</sub> .<sup>1</sup>/<sub
-          >2</sub
-        >
-        . <sup>1</sup>/<sub>2</sub> = <sup>1</sup>/<sub>32</sub>
-      </p>
+        <div class="cardcolor u2c2">
+          <details>
+            <summary>\(\left(\dfrac{3}{5}\right)^{2}\)</summary>
+            <img
+            src="../../resources/images/expoe.PNG"
+            alt="exemplo de potência em fração"
+          />
+          </details>
+        </div>
 
-      <p>
-        (<sup>2</sup>/<sub>7</sub>)<sup>3</sup> = <sup>2</sup>/<sub>7</sub> .
-        <sup>2</sup>/<sub>7</sub> . <sup>2</sup>/<sub>7</sub> =
-        <sup>8</sup>/<sub>343</sub>
+        <div class="cardcolor u2c2">
+          <details>
+            <summary>\(\left(\dfrac{1}{2}\right)^{5}\)</summary>
+            <p><br/>\(\left(\dfrac{1}{2}\right)^{5} = \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} \cdot \dfrac{1}{2} = \dfrac{1}{32}  \)</p>
+          </details>
+        </div>
+        
+        <div class="cardcolor u2c2">
+          <details>
+            <summary>\(\left(\dfrac{2}{7}\right)^{3}\)</summary>
+            <p><br/>\(\left(\dfrac{2}{7}\right)^{3} = \dfrac{2}{7} \cdot \dfrac{2}{7} \cdot \dfrac{2}{7} = \dfrac{8}{343}  \)</p>
+          </details>
+        </div>
+
       </p>
 
       <p class="calibre1">
@@ -1330,5 +1349,14 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
       <p class="calibre1 pg">192</p>
       <p class="calibre1">UNIDADE 5 - CAPÍTULO 2</p>
     </main>
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js"
+        integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js"
+        integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
   </body>
 </html>
