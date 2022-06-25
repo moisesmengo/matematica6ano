@@ -34,3 +34,26 @@ if (alert4) {
     });
 }
 
+const alert5 = document.getElementById('alert-perimetro');
+if (alert5) {
+
+    alert5.addEventListener('click', () => {
+        swal({
+            title: "Perímetro.",
+            text: "Perímetro de um polígono é igual à soma das medidas dos comprimentos dos seus lados",
+            icon: "info",
+        });
+    });
+}
+
+const alert6 = document.getElementById('alert-atencao');
+if (alert6) {
+
+    alert6.addEventListener('click', () => {
+        swal({
+            title: "Perímetro.",
+            text: "Medimos a altura de um triângulo qualquer por meio de um segmento de reta com origem em um dos vértices e perpendicular (forma um ângulo de 90º) ao lado oposto.",
+            icon: "warning",
+        });
+    });
+}
