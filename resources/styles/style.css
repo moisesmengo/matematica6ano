@@ -194,7 +194,23 @@ ul {
 .sup2::before {
   margin-top: 2px;
 }
-
+.anexo {
+  background: #0080c8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 300px;
+  flex-direction: column;
+  padding: 10px;
+  border-top: 8px solid rgb(241, 135, 22);
+  border-radius: 20px;
+}
+.anexo * {
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 .destaque {
   border-bottom: 2px solid #0080c8;
   margin: 20px 0 20px 0;
@@ -225,16 +241,41 @@ ul {
   line-height: 1.6;
 }
 
-#botao-regras, #botao-box, .botao-acao {
+#botao-regras,
+#botao-box,
+.botao-acao {
   cursor: pointer;
 }
-#botao-regras:hover, #botao-box:hover, .botao-acao:hover {
+#botao-regras:hover,
+#botao-box:hover,
+.botao-acao:hover {
   text-decoration: underline;
   font-weight: bold;
 }
 
 .regras-oculta {
   display: none;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.grid3 * {
+  font-size: 14px;
+}
+.grid3 h1 {
+  font-size: 18px;
+  color: #0080c8;
+  margin-bottom: 20px;
+}
+.grid3 h2 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.grid3 h3 {
+  margin-bottom: 10px;
 }
 
 @keyframes showup {
@@ -268,7 +309,8 @@ ul {
   }
 
   .grid2,
-  .sessoes_do_livro .grid2 {
+  .sessoes_do_livro .grid2,
+  .grid3 {
     grid-template-columns: 1fr !important;
   }
 
