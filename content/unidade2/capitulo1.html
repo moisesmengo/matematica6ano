@@ -22,7 +22,6 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
   </head>
   <body>
     <main class="container">
-      <p class="calibre1">UNIDADE 1 - CAPÍTULO 4</p>
       <p class="calibre1 pg">45</p>
 
       <p class="calibre1 titulo">UNIDADE 2 - Operações com números naturais</p>
@@ -878,7 +877,15 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         posteriores, se houver, são transformados em zero. Por exemplo, 50 é um
         arredondamento de 52. Observe outros exemplos de arredondamentos:
       </p>
-
+      <style>
+        .pg58 {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 80%;
+          flex-direction: column;
+        }
+      </style>
       <div class="carousel">
         <div class="carousel_item carousel_visible">
           <div class="pg58">
@@ -910,6 +917,38 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
             <p class="calibre1">Arredondando para o milhar mais próximo.</p>
           </div>
         </div>
+        <div class="carousel_item">
+          <div class="pg58">
+            <p class="calibre1"><b class="calibre3"> 57 → 60</b></p>
+            <p class="calibre1">Arredondando para dezena mais próxima.</p>
+          </div>
+        </div>
+        <div class="carousel_item">
+          <div class="pg58">
+            <p class="calibre1"><b class="calibre3"> 779 → 780</b></p>
+            <p class="calibre1">Arredondando para dezena mais próxima.</p>
+          </div>
+        </div>
+        <div class="carousel_item">
+          <div class="pg58">
+            <p class="calibre1"><b class="calibre3">96 → 100</b></p>
+
+            <p class="calibre1">Arredondando para centena mais próxima.</p>
+          </div>
+        </div>
+        <div class="carousel_item">
+          <div class="pg58">
+            <p class="calibre1"><b class="calibre3">1 258 → 1 300</b></p>
+
+            <p class="calibre1">Arredondando para centena mais próxima.</p>
+          </div>
+        </div>
+        <div class="carousel_item">
+          <div class="pg58">
+            <p class="calibre1"><b class="calibre3"> 1 897 → 2 000</b></p>
+            <p class="calibre1">Arredondando para o milhar mais próximo.</p>
+          </div>
+        </div>
 
         <div class="carousel_actions">
           <button
@@ -929,6 +968,51 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         </div>
       </div>
 
+      <script>
+        function initCarousel(carousel, next, prev) {
+          if (carousel && next && prev) {
+            let posicaoAtual = 0;
+            const slides = document.querySelectorAll(carousel);
+            const totalSlides = slides.length;
+
+            const atualizarPosicao = () => {
+              for (let slide of slides) {
+                slide.classList.remove("carousel_visible");
+                slide.classList.add("carousel_item_hidden");
+              }
+
+              slides[posicaoAtual].classList.add("carousel_visible");
+            };
+
+            const proximoSlide = () => {
+              if (posicaoAtual === totalSlides - 1) {
+                posicaoAtual = 0;
+              } else {
+                posicaoAtual++;
+              }
+              atualizarPosicao();
+            };
+
+            const SlideAnterior = () => {
+              if (posicaoAtual === 0) {
+                posicaoAtual = totalSlides - 1;
+              } else {
+                posicaoAtual--;
+              }
+              atualizarPosicao();
+            };
+
+            document.getElementById(next).addEventListener("click", () => {
+              proximoSlide();
+            });
+            document.getElementById(prev).addEventListener("click", () => {
+              SlideAnterior();
+            });
+          }
+        }
+        initCarousel(".carousel_item", "carousel-next2", "carousel-prev2");
+      </script>
+
       <p class="calibre1">
         ► se o algarismo que será substituído por zero for
         <b class="calibre3">5</b>, <b class="calibre3">6</b>,
@@ -936,18 +1020,8 @@ Bonfim dos Santos. – 2. ed. – Curitiba, PR : Terra Sul Editora, 2022."
         <b class="calibre3">9</b>, adiciona-se uma unidade ao algarismo da ordem
         anterior e os posteriores, se houver, são transformados em zero. Por
         exemplo, 80 é um arredondamento de 78. Observe outros exemplos de
-        arredondamentos: <b class="calibre3"> 57 → 60</b>
+        arredondamentos:
       </p>
-
-      <p class="calibre1">Arredondando para dezena mais próxima.</p>
-      <p class="calibre1"><b class="calibre3"> 779 → 780</b></p>
-      <p class="calibre1">Arredondando para dezena mais próxima.</p>
-      <p class="calibre1"><b class="calibre3">96 → 100</b></p>
-      <p class="calibre1">Arredondando para centena mais próxima.</p>
-      <p class="calibre1"><b class="calibre3">1 258 → 1 300</b></p>
-      <p class="calibre1">Arredondando para centena mais próxima.</p>
-      <p class="calibre1"><b class="calibre3"> 1 897 → 2 000</b></p>
-      <p class="calibre1">Arredondando para o milhar mais próximo.</p>
 
       <p class="calibre1 pg">58</p>
       <p class="calibre1">UNIDADE 2 - CAPÍTULO 1</p>
